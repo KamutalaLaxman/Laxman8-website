@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+    
+</style>
+    <script type="text/javascript">
+        function AgeChange(){
+            document.getElementById("txtAge").value=document.getElementById("rangeAge").value;
+        }
+        function bodyload(){
+            document.getElementById("txtGender").value=document.getElementById("rangeMale").value;
+        }
+        function Gender(){
+            document.getElementById("txtGender").value=document.getElementById("rangeFemale").value;
+        }
+            function Height(){
+            document.getElementById("txtHeight").value=document.getElementById("rangeHeight").value;
+            }
+            function Weight(){
+            document.getElementById("txtWeight").value=document.getElementById("rangeWeight").value;
+            }    
+            function bodyload(){
+            document.getElementById("status").style.marginleft="200px";
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    </body>
+    
+    <div class="mt-3">
+        <h2>BMI CALUCLATOR</h2>
+        <section>
+            <span class="bi bi-triangle-fill">Modify The Values and the Click Button to Use </span>
+            <div>
+                <img src="../public/sethescope.jpg" width="150">
+            </div>
+        </section>
+        <dl>
+            <dt>Age</dt>
+            <dd><input type="number">ages:2-100</dd>
+            <dt>Gender</dt>
+            <dd><input type="radio" name="gender" value="Male"checked>Male <input type="radio" name="gender" value="Female">Female</dd>
+            <dt>Height</dt>
+            <dd><input type="centimeter">cm</dd>
+            <dt>Weight</dt>
+            <dd><input type="kilogram">kg</dd>
+        </dl>
+        <button onclick="CalculateClick()" class="btn btn-success"><span class="bi bi-triangle-fill"></span>Calculate</button>
+        <button onclick="ClearClick()"  class="btn btn-info">Clear</button>
+    </div>
+    <div>
+    </div>
+    <div class="meter">
+        <div class="meter-bar bg-dark text-white me-2" style="width:30%">Normal</div>
+        <div class="meter-bar bg-info text-white me-2" style="width:40%">Over</div>
+        <div class="meter-bar bg-warning text-white me-2" style="width:30%">Obesity</div>
+        <div class="bi bi-triangle-fill" id="status"></div>
+    </div>
+    <footer>
+        <div>
+            <img src="../public/health.jpg" width="300">
+        </div>
+    </footer>
+</body>
+</html>
